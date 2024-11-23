@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_destination_locations",
+  "info": {
+    "displayName": "location",
+    "icon": "pinMap"
+  },
+  "options": {},
+  "attributes": {
+    "latitude": {
+      "type": "decimal",
+      "required": true
+    },
+    "longitude": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}

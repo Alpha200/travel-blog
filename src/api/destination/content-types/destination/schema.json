@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "destinations",
+  "info": {
+    "singularName": "destination",
+    "pluralName": "destinations",
+    "displayName": "destination",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 1
+    },
+    "titlePicture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "urlSlug": {
+      "type": "uid",
+      "required": true
+    },
+    "rank": {
+      "type": "integer"
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "destination.location"
+    }
+  }
+}
