@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_destination_texts",
+  "info": {
+    "displayName": "text",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    }
+  }
+}

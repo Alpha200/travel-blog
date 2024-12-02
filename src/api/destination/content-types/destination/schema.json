@@ -37,6 +37,11 @@
       "type": "component",
       "repeatable": false,
       "component": "destination.location"
+    },
+    "places": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::place.place"
     }
   }
 }

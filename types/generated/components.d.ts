@@ -12,10 +12,22 @@ export interface DestinationLocation extends Struct.ComponentSchema {
   };
 }
 
+export interface DestinationText extends Struct.ComponentSchema {
+  collectionName: 'components_destination_texts';
+  info: {
+    displayName: 'text';
+    icon: 'file';
+  };
+  attributes: {
+    text: Schema.Attribute.Text;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'destination.location': DestinationLocation;
+      'destination.text': DestinationText;
     }
   }
 }

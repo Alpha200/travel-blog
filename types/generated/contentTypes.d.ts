@@ -391,6 +391,7 @@ export interface ApiDestinationDestination extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     location: Schema.Attribute.Component<'destination.location', false>;
+    places: Schema.Attribute.Relation<'oneToMany', 'api::place.place'>;
     publishedAt: Schema.Attribute.DateTime;
     rank: Schema.Attribute.Integer;
     title: Schema.Attribute.String &
@@ -404,6 +405,38 @@ export interface ApiDestinationDestination extends Struct.CollectionTypeSchema {
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     urlSlug: Schema.Attribute.UID & Schema.Attribute.Required;
+  };
+}
+
+export interface ApiPlacePlace extends Struct.CollectionTypeSchema {
+  collectionName: 'places';
+  info: {
+    description: '';
+    displayName: 'Place';
+    pluralName: 'places';
+    singularName: 'place';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<['restaurant', 'attraction']>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    details: Schema.Attribute.DynamicZone<
+      ['destination.location', 'destination.text']
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::place.place'> &
+      Schema.Attribute.Private;
+    pictures: Schema.Attribute.Media<'images', true> &
+      Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -917,6 +950,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::destination.destination': ApiDestinationDestination;
+      'api::place.place': ApiPlacePlace;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
