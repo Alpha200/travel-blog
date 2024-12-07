@@ -430,8 +430,7 @@ export interface ApiPlacePlace extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::place.place'> &
       Schema.Attribute.Private;
-    pictures: Schema.Attribute.Media<'images', true> &
-      Schema.Attribute.Required;
+    pictures: Schema.Attribute.DynamicZone<['destination.picture']>;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;

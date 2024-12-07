@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_destination_pictures",
+  "info": {
+    "displayName": "picture",
+    "icon": "picture"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

@@ -9,7 +9,7 @@ export default factories.createCoreController('api::destination.destination', ({
         const { id } = ctx.params;
         const entity = await strapi.db.query('api::destination.destination').findOne({
             where: { urlSlug: id },
-            populate: ['titlePicture', 'places', 'places.pictures', 'places.details']
+            populate: ['titlePicture', 'places', 'places.pictures.image', 'places.details']
         });
         const sanitizedEntity = await this.sanitizeOutput(entity, ctx);
 

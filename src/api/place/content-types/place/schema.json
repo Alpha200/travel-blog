@@ -23,19 +23,17 @@
         "attraction"
       ]
     },
-    "pictures": {
-      "type": "media",
-      "multiple": true,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "details": {
       "type": "dynamiczone",
       "components": [
         "destination.location",
         "destination.text"
+      ]
+    },
+    "pictures": {
+      "type": "dynamiczone",
+      "components": [
+        "destination.picture"
       ]
     }
   }
