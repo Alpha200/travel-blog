@@ -435,7 +435,7 @@ export interface ApiPlacePlace extends Struct.CollectionTypeSchema {
     rating: Schema.Attribute.Integer &
       Schema.Attribute.SetMinMax<
         {
-          max: 5;
+          max: 10;
           min: 1;
         },
         number
