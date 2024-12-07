@@ -35,6 +35,11 @@
       "components": [
         "destination.picture"
       ]
+    },
+    "rating": {
+      "type": "integer",
+      "max": 5,
+      "min": 1
     }
   }
 }

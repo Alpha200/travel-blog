@@ -432,6 +432,14 @@ export interface ApiPlacePlace extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     pictures: Schema.Attribute.DynamicZone<['destination.picture']>;
     publishedAt: Schema.Attribute.DateTime;
+    rating: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 5;
+          min: 1;
+        },
+        number
+      >;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
