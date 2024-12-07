@@ -40,6 +40,9 @@
       "type": "integer",
       "max": 5,
       "min": 1
+    },
+    "visited": {
+      "type": "date"
     }
   }
 }
