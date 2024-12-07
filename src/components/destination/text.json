@@ -2,12 +2,19 @@
   "collectionName": "components_destination_texts",
   "info": {
     "displayName": "text",
-    "icon": "file"
+    "icon": "file",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "text": {
       "type": "text"
+    },
+    "textType": {
+      "type": "enumeration",
+      "enum": [
+        "comment"
+      ]
     }
   }
 }

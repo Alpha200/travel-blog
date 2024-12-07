@@ -27,11 +27,13 @@ export interface DestinationPicture extends Struct.ComponentSchema {
 export interface DestinationText extends Struct.ComponentSchema {
   collectionName: 'components_destination_texts';
   info: {
+    description: '';
     displayName: 'text';
     icon: 'file';
   };
   attributes: {
     text: Schema.Attribute.Text;
+    textType: Schema.Attribute.Enumeration<['comment']>;
   };
 }
 
