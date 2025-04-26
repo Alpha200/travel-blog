@@ -11,10 +11,10 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.5.1",
-    "@strapi/plugin-users-permissions": "5.5.1",
-    "@strapi/strapi": "5.5.1",
-    "better-sqlite3": "11.3.0",
+    "@strapi/plugin-cloud": "5.12.6",
+    "@strapi/plugin-users-permissions": "5.12.6",
+    "@strapi/strapi": "5.12.6",
+    "better-sqlite3": "11.9.1",
     "mysql2": "^3.11.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -22,13 +22,13 @@
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "typescript": "^5"
   },
   "engines": {
-    "node": ">=18.0.0 <=22.x.x",
+    "node": ">=20.0.0 <=22.x.x",
     "npm": ">=6.0.0"
   },
   "strapi": {
