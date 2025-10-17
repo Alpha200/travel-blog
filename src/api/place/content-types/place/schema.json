@@ -30,6 +30,13 @@
         "destination.text"
       ]
     },
+    "pictureGallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "pictures": {
       "type": "dynamiczone",
       "components": [
@@ -38,8 +45,8 @@
     },
     "rating": {
       "type": "integer",
-      "max": 10,
-      "min": 1
+      "min": 1,
+      "max": 10
     },
     "visited": {
       "type": "date"
