@@ -8,7 +8,8 @@
     "deploy": "strapi deploy",
     "develop": "strapi develop",
     "start": "strapi start",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "upload-media": "tsx scripts/upload-media.ts"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.28.0",
@@ -25,6 +26,9 @@
     "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "heic-convert": "^2.1.0",
+    "sharp": "^0.34.4",
+    "tsx": "^4.20.6",
     "typescript": "^5"
   },
   "engines": {
